@@ -15,10 +15,11 @@ To get started, first install all the necessary dependencies.
 Start the development server (changes will now update live in browser)
 
 ```
-> npm run start
+> npm start
 ```
 
 To view your project, go to: [http://localhost:3000/](http://localhost:3000/)
+
 
 To build for production 
 

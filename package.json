@@ -5,11 +5,12 @@
   "main": "./dist",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server",
+    "build": "weback",
     "prod": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:jwill9999/react_redux_template.git"
   },
   "keywords": [
     "react",
@@ -17,7 +18,8 @@
     "template"
   ],
   "author": {
-    "name": "Jason Williams"
+    "name": "Jason Williams",
+    "email": "jwill9999@icloud.com"
   },
   "license": "MIT",
   "dependencies": {
