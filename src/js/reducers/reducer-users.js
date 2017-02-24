@@ -7,27 +7,27 @@ export default function () {
     return [
         {
             id: 1,
-            first: "Bucky",
-            last: "Roberts",
-            age: 71,
-            description: "Bucky is a React developer and YouTuber",
-            thumbnail: "http://i.imgur.com/7yUvePI.jpg"
+            first: "Robert",
+            last: "Johnson",
+            age: 23,
+            description: "Robert is a full Stack Developer",
+            thumbnail: "https://s-media-cache-ak0.pinimg.com/736x/4b/54/9c/4b549cb826bfe38a6461861cb3a81adb.jpg"
         },
         {
             id: 2,
-            first: "Joby",
-            last: "Wasilenko",
-            age: 27,
-            description: "Joby loves the Packers, cheese, and turtles.",
-            thumbnail: "http://i.imgur.com/52xRlm8.png"
+            first: "Sky",
+            last: "Williams",
+            age: 31,
+            description: "sky loves android Game development.",
+            thumbnail: "http://i1.mirror.co.uk/incoming/article5428573.ece/ALTERNATES/s615b/archetypal-female-_3249633c.jpg"
         },
         {
             id: 3,
-            first: "Madison",
-            last: "Williams",
+            first: "Scott",
+            last: "Rayner",
             age: 24,
-            description: "Madi likes her dog but it is really annoying.",
-            thumbnail: "http://i.imgur.com/4EMtxHB.png"
+            description: "Scott likes Open source collaboration.",
+            thumbnail: "http://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/prototypen/m_sexy_gr.jpg"
         }
     ]
 }

@@ -9,7 +9,7 @@ class UserList extends Component {
     renderList() {
         return this.props.users.map((user) => {
             return (
-                <li
+                <li className='list-unstyled'
                     key={user.id}
                     onClick={() => this.props.selectUser(user)}
                 >
@@ -21,7 +21,7 @@ class UserList extends Component {
 
     render() {
         return (
-            <ul>
+            <ul >
                 {this.renderList()}
             </ul>
         );

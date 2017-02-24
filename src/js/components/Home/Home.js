@@ -12,10 +12,10 @@ class Home extends React.Component {
 
     return (
       <div className="container">
-        <h2>User List</h2>
-        <UserDetails/>
+        <h2>Developers...</h2>
+        <UserDetails />
         <hr/>
-        <h2>User Details</h2>
+        <h2>User Profile</h2>
         <UserList/>
       </div>
 
