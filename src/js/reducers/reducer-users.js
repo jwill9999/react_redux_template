@@ -11,7 +11,7 @@ export default function () {
             last: "Johnson",
             age: 23,
             description: "Robert is a full Stack Developer",
-            thumbnail: "https://s-media-cache-ak0.pinimg.com/736x/4b/54/9c/4b549cb826bfe38a6461861cb3a81adb.jpg"
+            thumbnail: "http://www.mobrosblog.co.uk/wp-content/uploads/2016/01/Van-Dyck-Beard-.jpg"
         },
         {
             id: 2,
@@ -19,7 +19,7 @@ export default function () {
             last: "Williams",
             age: 31,
             description: "sky loves android Game development.",
-            thumbnail: "http://i1.mirror.co.uk/incoming/article5428573.ece/ALTERNATES/s615b/archetypal-female-_3249633c.jpg"
+            thumbnail: "http://law.olemiss.edu/assets/misty_thumb-400x400.jpg"
         },
         {
             id: 3,
@@ -27,7 +27,7 @@ export default function () {
             last: "Rayner",
             age: 24,
             description: "Scott likes Open source collaboration.",
-            thumbnail: "http://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/prototypen/m_sexy_gr.jpg"
+            thumbnail: "https://pbs.twimg.com/profile_images/826988548654059520/olOsb6JL.jpg"
         }
     ]
 }

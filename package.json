@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
+    "material-ui": "^0.17.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-icons": "^2.2.1",
