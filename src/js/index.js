@@ -11,7 +11,7 @@ import allReducers from './reducers';
 import Root from './components/App';
 import Home from './components/Home/Home'
 import User from './components/User/User'
-import About from './components/About/About'
+import Form from './components/Form/Form'
 
 const logger = createLogger();
 const store = createStore(
@@ -27,7 +27,7 @@ class App extends React.Component {
                 <IndexRoute component={Home} />  
                 <Route path={"user/:id"} component={User} />
                 <Route path={"home"} component={Home} />   
-                <Route path={"about"} component={About} />  
+                <Route path={"form"} component={Form} />  
                 </Route>
                 <Route path={"home-single"} component={Home}/>
             </Router>
