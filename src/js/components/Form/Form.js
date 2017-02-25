@@ -1,7 +1,8 @@
 import React from 'react';
-import './About.scss';
+import ContactForm from '../../containers/MaterialUiForm'
+import './Form.scss';
 
-class About extends React.Component {
+class Form extends React.Component {
     constructor(props) {
         super()
        
@@ -14,7 +15,7 @@ class About extends React.Component {
         return (
 
             <div className="container clearfix">
-                <h1>This is the about page!!</h1>
+            <ContactForm/>    
             </div>
             
         )
@@ -24,4 +25,4 @@ class About extends React.Component {
 
 
 
-module.exports = About;
+module.exports = Form;

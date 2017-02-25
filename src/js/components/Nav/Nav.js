@@ -22,7 +22,7 @@ const Nav = (props) => {
           <ul className="nav navbar-nav">
             <li><Link to={"/home"} activeClassName={"active"}>Home</Link></li>
             <li><Link to={"/user/10"} activeClassName={"active"}>User</Link></li>
-            <li><Link to={"/about"} activeClassName={"active"}>About</Link></li>
+            <li><Link to={"/form"} activeClassName={"active"}>Form</Link></li>
           </ul>
         </div>
       </div>
