@@ -1,126 +1,84 @@
-import React from 'react'
-import {Field, reduxForm} from 'redux-form'
+import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton'
-import Checkbox from 'material-ui/Checkbox'
-import SelectField from 'material-ui/SelectField'
-import MenuItem from 'material-ui/MenuItem'
-import TextField from 'material-ui/TextField'
+import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import asyncValidate from '../actions/asyncValidate'
 
-const style = {
-  margin: 4
-};
 
-const validate = values => {
-  const errors = {}
-  const requiredFields = ['firstName', 'lastName', 'email', 'favoriteColor', 'notes']
-  requiredFields.forEach(field => {
-    if (!values[field]) {
-      errors[field] = 'Required'
+class TextFieldControlled extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      errors: false
+    };
+    this.handleChange = this.handleChange.bind(this);  
+    this.handleSubmit = this.handleSubmit.bind(this);   
     }
-  })
-  if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address'
+
+    
+
+  handleChange = (event) => {
+    const target = event.target
+    const value = target.value
+    const name = target.name
+
+    this.setState({[name]: value});
+  }  
+
+ 
+
+  handleSubmit(event) { 
+    const {firstName, lastName, email} = this.state
+    alert('Thank you :  ' + firstName + ' ' + lastName + ' ' + email);
+    var form = document
+      .getElementById('firstName')
+      .getElementById('lastName')
+      .getElementById('email')
+    form.value = ""
+    event.preventDefault();
   }
-  return errors
-}
 
-const renderTextField = ({
-  input,
-  label,
-  meta: {
-    touched,
-    error
-  },
-  ...custom
-}) => (<TextField
-  hintText={label}
-  floatingLabelText={label}
-  errorText={touched && error}
-  {...input}
-  {...custom}/>)
-
-const renderCheckbox = ({input, label}) => (<Checkbox
-  label={label}
-  checked={input.value
-  ? true
-  : false}
-  onCheck={input.onChange}/>)
-
-const renderRadioGroup = ({
-  input,
-  ...rest
-}) => (<RadioButtonGroup
-  {...input}
-  {...rest}
-  valueSelected={input.value}
-  onChange={(event, value) => input.onChange(value)}/>)
-
-const renderSelectField = ({
-  input,
-  label,
-  meta: {
-    touched,
-    error
-  },
-  children,
-  ...custom
-}) => (<SelectField
-  floatingLabelText={label}
-  errorText={touched && error}
-  {...input}
-  onChange={(event, index, value) => input.onChange(value)}
-  children={children}
-  {...custom}/>)
-
-const MaterialUiForm = props => {
-  const {handleSubmit, pristine, reset, submitting} = props
-  return (
-    <div className="row ">
-      <div className="col-md-6 col-md-offset-3">
-        <h1>Form Example</h1>
-        <h3>MaterialUiForm</h3>
-        <MuiThemeProvider >
-          <form onSubmit={handleSubmit}>
+  render() {
+    return (
+      <div className='row'>
+        <div className="col-md-6 col-md-offset-3">
+          <form onSubmit={this.handleSubmit}>
             <div>
-              <Field name="firstName" component={renderTextField} label="First Name"/>
+              <TextField
+                id='firstName'
+                name="firstName"
+                hintText="first Name"
+                floatingLabelText="Enter FirstName"
+                onChange={this.handleChange}/>
             </div>
             <div>
-              <Field name="lastName" component={renderTextField} label="Last Name"/>
+              <TextField
+                id='lastName'
+                name="lastName"
+                hintText="Last Name"
+                floatingLabelText="Enter LastName"
+                onChange={this.handleChange}/>
             </div>
             <div>
-              <Field name="email" component={renderTextField} label="Email"/>
+              <TextField
+                id='email'
+                name="email"
+                hintText="Email"
+                floatingLabelText="Enter an Email"
+                
+                onChange={this.handleChange}/>
             </div>
-            <div>
-              <Field
-                name="notes"
-                component={renderTextField}
-                label="Notes"
-                multiLine={true}
-                rows={2}/>
-            </div>
-            <div>
-              <RaisedButton type="submit" label="Primary" primary={true} style={style}/>
-              <RaisedButton
-                type="button"
-                label="Clear Values"
-                secondary={true}
-                style={style}
-                onClick={reset}/>
-            </div>
+            <br/>
+            <RaisedButton type="submit" label='Submit' primary={true}/>
           </form>
-        </MuiThemeProvider>
+        </div>
       </div>
-
-    </div>
-
-  )
+    );
+  }
 }
 
-export default reduxForm({
-  form: 'MaterialUiForm', // a unique identifier for this form
-  validate,
-  asyncValidate
-})(MaterialUiForm)
+export default TextFieldControlled

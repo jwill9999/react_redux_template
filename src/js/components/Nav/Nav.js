@@ -16,7 +16,7 @@ const Nav = (props) => {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand" href="#">React Redux Template</a>
+          <Link to={"/home"} className="navbar-brand" activeClassName={"active"}>React Redux Template</Link>
         </div>
         <div id="navbar" className="collapse navbar-collapse">
           <ul className="nav navbar-nav">

@@ -1,4 +1,6 @@
 import React from 'react';
+//Material-UI
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import ContactForm from '../../containers/MaterialUiForm'
 import './Form.scss';
 
@@ -15,7 +17,9 @@ class Form extends React.Component {
         return (
 
             <div className="container clearfix">
-            <ContactForm/>    
+              <MuiThemeProvider>
+                <ContactForm/>  
+              </MuiThemeProvider> 
             </div>
             
         )
